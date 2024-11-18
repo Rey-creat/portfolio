@@ -1,0 +1,140 @@
+/* Contact Us section styling */
+.contact-us {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the left */
+  max-width: 800px;
+  margin: 40px auto 0; /* Add margin-top to push it down */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-us h1 {
+  font-size: 40px;
+  color: #007bff;
+  margin: 0 auto; /* Center horizontally */
+  padding: 15%;
+  font-weight: 600;
+  text-align: center;
+  display: block; /* Ensure it's treated as a block element */
+  font-family: "Montserrat";
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: space-between; /* Space out the contact info and form */
+  width: 100%; /* Ensure container takes full width */
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Stack contact items vertically */
+  width: 40%; /* Adjust width as needed */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center; /* Align icons and text vertically */
+  margin-bottom: 10px; /* Space between items */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.contact-item i {
+  font-size: 30px; /* Icon size */
+  color: #007bff; /* Icon color */
+  margin-right: 10px; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.contact-item:hover i,
+.contact-item:active i {
+  transform: translateY(-5px); /* Move icon up by 5px on hover or active */
+}
+
+.contact-item p {
+  margin: 0; /* Remove default margin */
+  color: #007bff; /* Make text blue */
+}
+
+.contact-info a {
+  color: #007bff; /* Style links with blue color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.contact-info .social-media {
+  margin-top: 20px; /* Space above the social media icons */
+  display: flex; /* Use flexbox to align icons */
+  gap: 15px; /* Adjust gap between icons as needed */
+}
+
+.contact-info .social-media a {
+  margin-right: 15px; /* Space between icons */
+  color: #007bff; /* Icon color */
+  font-size: 40px; /* Icon size */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.contact-info .social-media a:hover {
+  color: #0056b3; /* Icon color on hover */
+  transform: translateY(-5px); /* Move icon up by 5px on hover */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Adjust width to align with contact-info */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%; /* Ensure form-group takes full width of the form container */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 2px;
+  color: #007bff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  background-color: transparent;
+  text-align: left; /* Align text inside input and textarea to the left */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  color: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0056b3; /* Change border color on focus */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+.submit-button {
+  background-color: #007bff; /* Use the same color as your other buttons */
+  color: white;
+  border: none;
+  padding: 15px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 30%;
+  font-weight: 400;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

@@ -1,0 +1,96 @@
+footer {
+  margin-top: 130px;
+  background: #000;
+  width: 100%;
+  padding: 10px 0;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #007bff; /* This applies a border only to the top */
+}
+
+.portfoliotext p {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.line p {
+  font-size:40px;
+  color: #113f81;
+}
+
+.footerbuttons ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.footerbuttons ul li {
+  margin: 0 10px;
+}
+
+.footerbuttons ul li .bx {
+  font-size: 25px;
+  transition: 0.6s;
+  color: #ffffff;
+}
+
+.footerbuttons ul li a {
+  display: block;
+  text-align: center;
+}
+
+.footernavlinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footernavlinks ul li {
+  margin: 0 10px;
+}
+
+.footernavlinks ul li a {
+  text-decoration: none;
+  color:  #007bff;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: "Montserrat";
+  position: relative;
+}
+
+.footernavlinks ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.footernavlinks ul li:hover::after {
+  width: 100%;
+}
+.footernavbutton {
+  margin-top: 20px; /* Space above the social media icons */
+  display: flex; /* Use flexbox to align icons */
+  gap: 15px; /* Adjust gap between icons as needed */
+}
+
+.footernavbutton a {
+  margin-right: 15px; /* Space between icons */
+  color: #007bff; /* Icon color */
+  font-size: 35px; /* Icon size */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.footernavbutton a:hover {
+  color: #0056b3; /* Icon color on hover */
+  transform: translateY(-5px); /* Move icon up by 5px on hover */
+}

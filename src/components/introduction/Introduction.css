@@ -1,0 +1,169 @@
+
+
+/* Introduction section styling */
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* For positioning the pseudo-element */
+  background: #000; /* Ensure the background is black */
+}
+
+/* Blur effect */
+.introduction::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px; /* Adjust the width of the blur area */
+  height: 100px; /* Adjust the height of the blur area */
+  z-index: -1; /* Ensure the blur effect is behind content */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+/* Ensure content doesn't overlap with the blur effect */
+.introduction-content {
+  position: relative; /* Adjusted to ensure content is on top */
+  z-index: 1; /* Ensure content is above the blur effect */
+}
+
+/* Header text styling */
+.introduction-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.introduction-content h1 {
+  font-size: 20px; /* Increase font size */
+  margin: 0;
+  font-weight: 500; /* Make the text bolder */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better readability */
+  letter-spacing: 2px; /* Add space between letters */
+  position: relative; /* For positioning the decorative container */
+  display: inline-block; /* Ensure the container fits the text */
+  padding: 3px 7px; /* Padding for decorative container */
+  border-radius: 8px; /* Rounded corners for the container */
+  background: linear-gradient(145deg, rgba(0, 123, 255, 0.2), rgba(0, 123, 255, 0.6)); /* Gradient background */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect for depth */
+}
+
+/* Role text styling */
+.frontend-text {
+  display: flex;
+  align-items: center;
+  font-size: 40px; /* Capitalized text size */
+  margin-bottom: 20px; /* Space between the text and the button */
+}
+
+.text-part {
+  display: inline-block;
+  text-transform: uppercase; /* Capitalize all letters */
+}
+
+/* Animation for individual letters */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInOut 3s infinite; /* Animation duration and loop */
+  animation-delay: calc(0.1s * var(--i)); /* Staggered animation delay */
+}
+
+/* Animation for fading in and out */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Customize font size and color for letters */
+.frontend-text .letter {
+  color: #007bff; /* Set text color to #007bff */
+}
+
+/* Space between text parts */
+.text-gap {
+  display: inline-block;
+  width: 2px; /* Set gap width to 2px */
+  background-color: #007bff; /* Set color of the gap */
+}
+
+/* Spacing between text segments */
+.segment-gap {
+  display: inline-block;
+  width: 20px; /* Adjust spacing between text segments */
+}
+
+/* Avatar container styling */
+.avatar {
+  position: relative; /* For positioning the background and image */
+  width: 300px; /* Adjust the width based on the size of your image */
+  height: 300px; /* Adjust the height based on the size of your image */
+}
+
+/* Avatar image styling */
+/* Avatar image styling */
+.avatar img {
+  display: block; /* Remove any unwanted space below the image */
+  border-radius: 50%; /* Make the image circular */
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover; /* Ensure the image covers the container */
+  box-shadow: rgba(46, 46, 240, 0.48) 6px 2px 16px 0px, -6px -2px 16px 0px;
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Zoom effect on image hover */
+.avatar img:hover {
+  transform: scale(1.1); /* Zoom in by 10% */
+}
+
+
+/* More button styling */
+.more-button {
+  margin-top: 20px; /* Space between the text and the button */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Specific styling for "HIRE ME" button */
+.more-button.hire {
+  color: #fff;
+  background-color: #007bff; /* Blue button color */
+}
+
+.more-button.hire:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific styling for "EXPLORE MORE" button */
+.more-button.explore {
+  color: #007bff;
+  background-color: transparent; /* No background */
+  border: 2px solid #007bff; /* Blue border */
+  margin-left: 5px; /* Add margin to create space between buttons */
+}
+
+.more-button.explore:hover {
+  color: #fff; /* Text color on hover */
+  background-color: #007bff; /* Blue background on hover */
+}
+

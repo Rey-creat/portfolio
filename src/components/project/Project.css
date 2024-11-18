@@ -1,0 +1,130 @@
+/* Wrapper for the entire portfolio section */
+.portfolio-wrapper {
+  padding: 20px;
+  margin-top: 100px; /* Adjust as needed */
+  text-align: center; /* Center the content */
+}
+
+/* Header styling */
+.portfolio-header {
+  font-size: 40px;
+  color: #007bff; /* Header color */
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+
+.portfolio-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 5px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+.portfolio-header:hover::after {
+  width: 100%;
+}
+
+/* Slide container */
+.portfolio-slide {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 600px; /* Adjust height as needed */
+  cursor: pointer; /* Indicate that the slide is clickable */
+  position: relative; /* For positioning text */
+  overflow: hidden; /* Ensure text does not overflow outside container */
+}
+
+/* Container for each project */
+.portfolio-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px; /* Limits the width */
+  width: 90%;
+  height: 600px; /* Fixed height to maintain shape */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For positioning text */
+  overflow: hidden; /* Ensure text does not overflow outside container */
+}
+
+/* Title styling */
+.portfolio-title {
+  font-size: 24px;
+  color: black; /* Title color */
+  margin-bottom: 10px;
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Text that appears on click */
+.portfolio-text {
+  position: absolute;
+  top: 100%; /* Start below the container */
+  left: 0;
+  width: 100%; /* Cover the entire width */
+  height: 100%; /* Cover the entire height */
+  background-color: rgba(0, 123, 255, 0.8); /* Slightly opaque blue background */
+  color: white; /* Text color for better contrast */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  align-items: center; /* Center text horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease; /* Smooth transition for opacity and position */
+  text-align: center;
+  z-index: 10; /* Ensure text is above the image */
+}
+
+/* Show text when clicked */
+.portfolio-slide.active .portfolio-text {
+  top: 0; /* Slide text up to cover the container */
+  opacity: 1; /* Show text */
+}
+
+/* Title inside portfolio-text */
+.portfolio-text h2 {
+  color: black; /* Ensure title color is white for better contrast */
+  font-size: 36px; /* Increase font size for better visibility */
+  font-weight: bold; /* Make title bold */
+  margin-bottom: 20px; /* Space between title and text */
+}
+
+/* Text inside portfolio-text */
+.portfolio-text p {
+  font-size: 20px; /* Adjust text size */
+  color: black; /* Ensure text color is white */
+  margin: 0; /* Remove margin */
+  font-weight: 600; /* Bold text */
+  text-align: left;
+}
+
+/* Image container */
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: -2px 2px 100px 16px #000000;
+}
